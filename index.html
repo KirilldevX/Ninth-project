@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="mobile">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="desktop">
+      <img src="assets/images/illustration-sign-up-tablet.svg" alt="" class="tablet">
+      <div class="main">
+        <div class="name">
+          <h2>Stay updated!</h2>
+          <p class="txt">Join 60,000+ product managers receiving monthly updates on:</p>
+        </div>
+        <div class="verif">
+          <div class="verifs">
+            <img src="assets/images/icon-list.svg" alt="">
+            <p class="txt">Product discovery and building what matters</p>
+          </div>
+          <div class="verifs">
+            <img src="assets/images/icon-list.svg" alt="">
+            <p class="txt">Measuring to ensure updates are a success</p>
+          </div>
+          <div class="verifs">
+            <img src="assets/images/icon-list.svg" alt="">
+            <p class="txt">And much more!</p>
+          </div>
+          <div class="verifs">
+            <span class="author">Author:<a href="https://github.com/KirilldevX">KirillDevX</a></span>
+          </div>
+        </div>
+        <div class="form">
+          <div class="email">
+            <div class="up">
+              <span>Email address</span>
+              <p class="error">Valid email required</p>
+            </div>
+            <input id="email" type="email" name="email" placeholder="email@company.com">
+          </div>
+          <button class="subscribe">Subscribe to monthly newsletter</button>
+        </div>
+      </div>
+    </div>
+    <div class="container_subscribe">
+      <img class="check" src="assets/images/icon-list.svg" alt="">
+      <h1>Thanks for subscribing!</h1>
+      <p class="txt">A confirmation email has been sent to <span class="ex">ash@loremcompany.com</span>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+      <button class="dismiss">Dismiss message</button>
+    </div>
+  </main>
+
+  <script>
+    let btn = document.querySelector('.subscribe')
+    let btn1 = document.querySelector('.dismiss')
+    let error = document.querySelector('.error')
+    let container = document.querySelector('.container')
+    let containerSub = document.querySelector('.container_subscribe')
+
+    btn.onclick = function() {
+      if(email.value === "" || !email.validity.valid) {
+        error.style.opacity = '1'
+        email.classList.add('active')
+        setTimeout(() => {
+          email.classList.remove('active')
+          error.style.opacity = '0'
+        },1500)
+        return
+      }
+      container.style.display = 'none'
+      containerSub.style.display = 'flex'
+    }
+
+    btn1.onclick = function() {
+      container.style.display = 'flex'
+      containerSub.style.display = 'none'
+      email.value = ""
+    }
+  </script>
+</body>
+</html>

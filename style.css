@@ -1,0 +1,186 @@
+.desktop, .tablet {
+    display: none;
+}
+* {
+    font-family: "Roboto", sans-serief;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(234, 29%, 20%);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+.main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+h2, .name, .verif, span {
+    color: hsl(234, 29%, 20%);
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+h2 { 
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+.verif {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.verifs {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.txt {
+    line-height: 1.5;
+    font-weight: 400;
+    color: hsl(235, 18%, 26%);
+    margin: 0;
+}
+.author {
+    opacity: 0.3;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.email .up span {
+    font-size: 13px;
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+.up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.error {
+    opacity: 0;
+    color: hsl(4, 100%, 67%);
+    font-size: 13px;
+    font-weight: 700;
+}
+input {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%,58%);
+}
+.active {
+    border: 1px solid hsl(4, 100%, 67%);
+}
+button {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+}
+.subscribe {
+    padding: 20px;
+}
+.container_subscribe {
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    height: auto;
+    margin: 40px auto;
+    gap: 15px;
+}
+.container_subscribe p span {
+    font-weight: 700;
+}
+.check {
+    margin: 0 auto 0 0;
+    height: 50px;
+    width: 50px;
+}
+h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+@media(min-width:601px) and (max-width:1439px) {
+    .desktop, .mobile {
+    display: none;
+}
+    .tablet {
+    display: block;
+}
+    .container {
+    border-radius: 15px;
+    max-width: 560px;
+    flex: none;
+    padding: 10px;
+}
+    .container_subscribe {
+    gap: 25px;
+}
+}
+@media (min-width:1440px) {
+    .tablet, .mobile {
+    display: none;
+}
+    .desktop {
+    display: block;
+    margin: 0;
+}
+    .container_subscribe {
+    gap: 25px;
+}
+    .main {
+    padding: 0;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+    .container {
+    flex-direction: row-reverse;
+    border-radius: 15px;
+    max-width: 950px;
+    flex: none;
+    padding: 20px;
+}
+}
