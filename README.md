@@ -23,7 +23,6 @@ KirillDevX
 
 **GitHub:** [KirillDevX](https://github.com/KirilldevX)
 **Kwork:** [Мой профиль на Kwork](https://kwork.ru/user/kirilldevx)
-**Youtube** [KirillDevX](https://www.youtube.com/@KirillDevX)
 
 **Desktop:**
 
